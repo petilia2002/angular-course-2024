@@ -1,0 +1,39 @@
+<!--Интерполяция-->
+<h2>Заголовок страницы: {{ title }}</h2>
+
+<div>
+  <p>{{ user.name }}</p>
+  <p>{{ user.age }}</p>
+</div>
+
+<!--Одностороннее связывание-->
+<!--У ссылок есть атрибут с подсказкой-->
+<a href="javascript:void(0)" title="hint">Какая-то ссылка</a>
+<br />
+<!--Это работает, но так обычно не делают:-->
+<a href="javascript:void(0)" title="{{ hint }}">Какая-то ссылка</a>
+<br />
+<!--Используем одностороннее связывание:-->
+<a href="javascript:void(0)" [title]="hint">Какая-то ссылка</a>
+<br />
+<!--Ошибка:-->
+<a href="javascript:void(0)" title="hint">Какая-то ссылка</a>
+<br />
+<!--Еще один редкий способ:-->
+<a href="javascript:void(0)" bind-title="hint">Какая-то ссылка</a>
+
+<!--Задание стилей-->
+<p class="red">Красный цвет</p>
+<p style="color: tomato">Красный цвет</p>
+
+<!--Применяем односторонее связывание:-->
+<p [class]="cssClass">Красный цвет</p>
+<p [style]="inlineStyles">Красный цвет</p>
+
+<p [style.color]="cssClass">Синий цвет</p>
+<p [style.color]="'blue'">Синий цвет</p>
+
+<!--Еще несколько примеров:-->
+<p [style.font-size]="'25px'">Синий цвет</p>
+<p [style.font-size.px]="25">Синий цвет</p>
+<p [style.font-size.px]="fontSize">Синий цвет</p>

@@ -1,0 +1,46 @@
+<!--Pipes Angular-->
+<!--Import CommonModule!-->
+<h2>{{ title | lowercase }}</h2>
+<h2>{{ title | uppercase }}</h2>
+<p>{{ "какая-то строка" | uppercase }}</p>
+<p>{{ "какая-то строка вместе с переменной title " + title | uppercase }}</p>
+<p>{{ "какая-то строка вместе с переменной title " + title | titlecase }}</p>
+
+<!--JSON Pipe-->
+<p>{{ user | json }}</p>
+
+<!--Slice Pipe + цепочки pipes-->
+<p>{{ "Какая-то строка" | slice : 1 | uppercase }}</p>
+<p>{{ "Какая-то строка" | slice : 9 : 15 | uppercase }}</p>
+
+<!--Date Pipe-->
+<p>{{ date }}</p>
+<p>{{ date | date }}</p>
+<p>{{ date | date : "yyyy-MM-dd" }}</p>
+<p>{{ date | date : "yyyy-MM-dd" | slice : 0 : 7 }}</p>
+
+<!--Custom Cut Pipe-->
+<p>
+  {{
+    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias
+  consectetur asperiores aliquam fuga tempora? Voluptate facilis reprehenderit,
+  labore debitis, rem repudiandae consequuntur cumque nemo voluptatibus odio
+  culpa eos harum aspernatur quis architecto corporis explicabo blanditiis
+  cupiditate saepe mollitia." | cut
+  }}
+</p>
+
+<p>
+  {{
+    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias
+  consectetur asperiores aliquam fuga tempora? Voluptate facilis reprehenderit,
+  labore debitis, rem repudiandae consequuntur cumque nemo voluptatibus odio
+  culpa eos harum aspernatur quis architecto corporis explicabo blanditiis
+  cupiditate saepe mollitia." | cut : 10
+  }}
+</p>
+
+<!--Custom Sort Pipe-->
+<h3>Custom Sort Pipe</h3>
+<h4>After sorting:</h4>
+<p>{{ users | sort : "age" | json }}</p>
