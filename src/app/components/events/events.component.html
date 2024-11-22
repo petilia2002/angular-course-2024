@@ -1,0 +1,16 @@
+<!--<input type="text" id="username" name="username" (input)="clickHandler()" />-->
+<!--<input type="text" id="username" name="username" (keydown.shift)="clickHandler()" />-->
+<input
+  type="text"
+  id="username"
+  name="username"
+  (keydown.shift.control.enter)="inputHandler($event)"
+/>
+
+<!--<button style="cursor: pointer" (click)="color = 'tomato'">Click me</button>-->
+<!--<button style="cursor: pointer" on-click="color = 'tomato'">Click me</button>-->
+<button style="cursor: pointer" (click)="clickHandler('coral')">
+  Click me
+</button>
+
+<p [style.background]="color">Hello!</p>
