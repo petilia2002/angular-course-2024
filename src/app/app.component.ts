@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { ExploreComponent } from './components/explore/explore.component';
-import { PipesLearningComponent } from './components/pipes-learning/pipes-learning.component';
-import { EventsComponent } from './components/events/events.component';
+import { LearnTemplatesComponent } from './components/learn-templates/learn-templates.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [EventsComponent],
+  imports: [LearnTemplatesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

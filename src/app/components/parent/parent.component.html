@@ -1,0 +1,11 @@
+<h3>Parent name: {{ name }}</h3>
+<button (click)="handlerClick('John Doe')">Сменить имя</button>
+<!--
+<app-child
+  [color]="color"
+  [name]="name"
+  (changedName)="setChildName($event)"
+></app-child>
+-->
+
+<app-child [(name)]="name"></app-child>
