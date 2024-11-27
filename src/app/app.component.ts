@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { LearnTemplatesComponent } from './components/learn-templates/learn-templates.component';
+import { LearnDirectivesComponent } from './components/learn-directives/learn-directives.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [LearnTemplatesComponent],
+  imports: [LearnDirectivesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

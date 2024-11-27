@@ -1,0 +1,56 @@
+<!--Directive NgIf-->
+<!--
+<button (click)="isShow = !isShow">Click</button>
+<p *ngIf="isShow">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, neque. Quia
+  molestiae, error perferendis quam ducimus provident dolores beatae nulla.
+</p>
+-->
+
+<!--
+<button (click)="isShow = !isShow">Click</button>
+<p *ngIf="isShow; else text">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, neque. Quia
+  molestiae, error perferendis quam ducimus provident dolores beatae nulla.
+</p>
+
+<ng-template #text>
+  <p>Text from ng-template</p>
+</ng-template>
+-->
+
+<!--
+<button (click)="isShow = !isShow">Click</button>
+<p *ngIf="isShow; then firstText; else secondText">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, neque. Quia
+  molestiae, error perferendis quam ducimus provident dolores beatae nulla.
+</p>
+
+<ng-template #firstText>
+  <p>First text from ng-template</p>
+</ng-template>
+
+<ng-template #secondText>
+  <p>Second text from ng-template</p>
+</ng-template>
+-->
+<!--Directive NgFor-->
+<!--
+<div *ngFor="let msg of arr; let i = index; let isEven = even">
+  <p *ngIf="isEven" [style.color]="'red'">{{ msg }} --- {{ i }}</p>
+  <p *ngIf="!isEven" [style.color]="'green'">{{ msg }} --- {{ i }}</p>
+</div>
+-->
+
+<!--Directive NgSwitch-->
+<!--
+<div *ngFor="let item of arr" [ngSwitch]="item">
+  <p [style.background]="'tomato'" *ngSwitchCase="'One'">{{ item }}</p>
+  <p [style.background]="'yellow'" *ngSwitchCase="'Two'">{{ item }}</p>
+  <p [style.background]="'steelblue'" *ngSwitchDefault>{{ item }}</p>
+</div>
+-->
+
+<div *ngFor="let user of users; let i = index">
+  <p [ngClass]="{ color: user.age > 18 }">{{ i + 1 }} {{ user.name }}</p>
+</div>
